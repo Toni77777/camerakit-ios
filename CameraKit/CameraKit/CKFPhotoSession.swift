@@ -266,4 +266,12 @@ extension CKFSession.FlashMode {
             }
         }
     }
+    
+    public func startSafePortraitOrientation() {
+        resolution = CGSize(width: 9999999, height: 9999999) // manual hack setup invalidate resolution to save portrait orientation
+    }
+
+    public func stopSafePortraitOrientation() {
+        resolution = CGSize.zero
+    }
 }
